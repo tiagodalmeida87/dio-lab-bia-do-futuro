@@ -2,7 +2,7 @@
 
 ## Dados Utilizados
 
-Para o Mestre Fortunato ser assertivo, ele precisa olhar para o negócio, não apenas para o CPF.
+Para o Mestre Fortunato ser assertivo, ele precisa olhar para a saúde do negócio de forma holística, identificando padrões de comportamento e obrigações fiscais do MEI.
 
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
@@ -11,8 +11,7 @@ Para o Mestre Fortunato ser assertivo, ele precisa olhar para o negócio, não a
 | `metas_crescimento.json` | JSON | Personalizar conselhos sobre quando investir em novos equipamentos ou estoque |
 | `historico_mentorias.csv` | CSV | Contextualizar conversas anteriores e lembretes de pendências financeiras |
 
-> [!TIP]
-> **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
+
 
 ---
 
