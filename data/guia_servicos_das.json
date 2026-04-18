@@ -1,0 +1,29 @@
+{
+    "ano_base": 2024,
+    "limite_faturamento_anual": 81000.00,
+    "limite_faturamento_mensal_proporcional": 6750.00,
+    "categorias": [
+        {
+            "nome": "Comércio e Indústria",
+            "imposto_fixo": 67.60,
+            "composicao": "INSS + ICMS"
+        },
+        {
+            "nome": "Serviços",
+            "imposto_fixo": 71.60,
+            "composicao": "INSS + ISS"
+        },
+        {
+            "nome": "Comércio e Serviços",
+            "imposto_fixo": 72.60,
+            "composicao": "INSS + ICMS + ISS"
+        }
+    ],
+    "vencimento_padrao": "Todo dia 20",
+    "alerta_atraso": "Multa de 0,33% ao dia limitada a 20% + Juros Selic.",
+    "obrigacoes_anuais": {
+        "nome": "DASN-SIMEI (Declaração Anual do Simples Nacional)",
+        "prazo_limite": "31 de maio",
+        "descricao": "Declaração obrigatória com a soma de tudo que a empresa faturou no ano anterior, mesmo que não tenha tido lucro."
+    }
+}
