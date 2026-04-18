@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "item": "Parafusadeira Profissional de Impacto",
+        "valor_alvo": 850.00,
+        "valor_reservado": 350.00,
+        "prazo_estimado": "2024-07-30",
+        "prioridade": "Alta",
+        "status": "Em andamento",
+        "dica_mentor": "Estamos quase na metade do valor, chefe! Fique de olho em promoções relâmpago nas lojas de ferragem."
+    },
+    {
+        "id": 2,
+        "item": "Reserva de Emergência da Marcenaria",
+        "valor_alvo": 3000.00,
+        "valor_reservado": 100.00,
+        "prazo_estimado": "2025-05-30",
+        "prioridade": "Essencial",
+        "status": "Em andamento",
+        "dica_mentor": "Esse é o nosso colete salva-vidas. Se uma máquina pifar, a gente não precisa pegar empréstimo caro no banco."
+    },
+    {
+        "id": 3,
+        "item": "Reforma do Balcão de Atendimento",
+        "valor_alvo": 1200.00,
+        "valor_reservado": 0.00,
+        "prazo_estimado": "2024-12-15",
+        "prioridade": "Média",
+        "status": "Planejado",
+        "dica_mentor": "Vamos focar na ferramenta e na reserva primeiro. O balcão fica pro fim do ano, combinado?"
+    }
+]
