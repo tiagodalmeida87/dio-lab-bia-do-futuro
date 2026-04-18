@@ -2,14 +2,14 @@
 
 ## Dados Utilizados
 
-Descreva se usou os arquivos da pasta `data`, por exemplo:
+Para o Mestre Fortunato ser assertivo, ele precisa olhar para o negócio, não apenas para o CPF.
 
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
+| `fluxo_caixa_mei.csv` | CSV | Analisar entradas, saídas e identificar o lucro real do mês |
+| `guia_servicos_das.json` | JSON | Consultar alíquotas e vencimentos do imposto DAS conforme a categoria (Comércio/Serviço) |
+| `metas_crescimento.json` | JSON | Personalizar conselhos sobre quando investir em novos equipamentos ou estoque |
+| `historico_mentorias.csv` | CSV | Contextualizar conversas anteriores e lembretes de pendências financeiras |
 
 > [!TIP]
 > **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
@@ -20,7 +20,7 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-[Sua descrição aqui]
+Os dados foram expandidos para separar gastos Pessoais (PF) de gastos do Negócio (PJ). Adicionei um campo de "Categoria MEI" no perfil para que o agente saiba exatamente qual imposto aplicar e quais deduções são permitidas por lei.
 
 ---
 
@@ -29,27 +29,32 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+Os arquivos JSON de regras fiscais e o CSV de fluxo de caixa são carregados no início da sessão. O sistema realiza uma leitura prévia para calcular o saldo disponível para "pro-labore" antes de iniciar a interação com o usuário.
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-[Sua descrição aqui]
+Os dados são inseridos dinamicamente no system prompt. Se o saldo de caixa estiver próximo do valor do DAS (imposto), o agente recebe uma instrução de prioridade para alertar o usuário sobre esse compromisso antes de qualquer outra sugestão de gasto.
 
 ---
 
 ## Exemplo de Contexto Montado
 
-> Mostre um exemplo de como os dados são formatados para o agente.
+> Aqui está como o "Mestre Fortunato" enxerga a situação antes de falar com o empreendedor:
 
 ```
-Dados do Cliente:
-- Nome: João Silva
-- Perfil: Moderado
-- Saldo disponível: R$ 5.000
+Dados do Microempreendedor:
+- Nome: Ricardo (Marceneiro)
+- Categoria: MEI - Serviços
+- Saldo em Conta PJ: R$ 3.200,00
+- Meta: Comprar Serra de Bancada (R$ 1.500,00)
 
-Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
+Últimas Movimentações:
+- 10/04: Entrada - Venda Armário Planejado: + R$ 1.200,00
+- 12/04: Saída - Material de Madeira: - R$ 450,00
+- 15/04: Saída - Conta de Luz Residencial (ALERTA PF): - R$ 180,00
+
+Lembretes Fiscais:
+- Vencimento DAS: Dia 20 (R$ 70,60) - Status: Pendente.
 ...
 ```
