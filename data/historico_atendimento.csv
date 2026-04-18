@@ -1,6 +1,22 @@
-data,canal,tema,resumo,resolvido
-2025-09-15,chat,CDB,Cliente perguntou sobre rentabilidade e prazos,sim
-2025-09-22,telefone,Problema no app,Erro ao visualizar extrato foi corrigido,sim
-2025-10-01,chat,Tesouro Selic,Cliente pediu explicação sobre o funcionamento do Tesouro Direto,sim
-2025-10-12,chat,Metas financeiras,Cliente acompanhou o progresso da reserva de emergência,sim
-2025-10-25,email,Atualização cadastral,Cliente atualizou e-mail e telefone,sim
+data,descricao,categoria,tipo,valor,conta
+2024-04-05,Compra de Chapas MDF e Fita de Borda,Insumos,Saída,650.00,PJ
+2024-04-10,Sinal - Guarda-roupa Planejado (Cliente A),Receita,Entrada,1500.00,PJ
+2024-04-12,Assinatura Netflix,Gasto Pessoal,Saída,55.90,PF
+2024-04-15,Compra de Ferragens e Dobradiças,Insumos,Saída,210.00,PJ
+2024-04-18,Pagamento DAS Mensal,Impostos,Saída,71.60,PJ
+2024-04-20,Parcela Final - Guarda-roupa Planejado,Receita,Entrada,1500.00,PJ
+2024-04-22,Reserva para Meta: Parafusadeira,Investimento,Saída,150.00,PJ
+2024-04-25,Conta de Luz - Oficina,Custo Fixo,Saída,145.00,PJ
+2024-04-28,Pedido iFood (Final de Semana),Gasto Pessoal,Saída,78.50,PF
+2024-05-01,Serviço: Restauração Mesa de Jantar,Receita,Entrada,450.00,PJ
+2024-05-03,Compra de Verniz e Lixas,Insumos,Saída,85.50,PJ
+2024-05-08,Sinal - Gabinete de Banheiro (Cliente B),Receita,Entrada,600.00,PJ
+2024-05-10,Serviço: Instalação de Prateleiras,Receita,Entrada,250.00,PJ
+2024-05-12,Conta de Água - Residência,Gasto Pessoal,Saída,95.00,PF
+2024-05-15,Supermercado Semanal,Gasto Pessoal,Saída,320.00,PF
+2024-05-18,Pagamento DAS Mensal,Impostos,Saída,71.60,PJ
+2024-05-20,Parcela Final - Gabinete de Banheiro,Receita,Entrada,600.00,PJ
+2024-05-22,Reserva para Meta: Parafusadeira,Investimento,Saída,200.00,PJ
+2024-05-25,Conta de Luz - Oficina,Custo Fixo,Saída,138.00,PJ
+2024-05-28,Compra de EPI (Óculos e Máscara),Segurança,Saída,65.00,PJ
+2024-05-30,Reserva para Meta: Fundo de Emergência,Investimento,Saída,100.00,PJ
