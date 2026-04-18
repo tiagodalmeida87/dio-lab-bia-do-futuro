@@ -1,4 +1,4 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# 🤖 Agente Financeiro Inteligente com IA Generativa - o Mestre Fortunato!
 
 ## Contexto
 
@@ -35,10 +35,10 @@ Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alim
 
 | Arquivo | Formato | Descrição |
 |---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
+| `fluxo_caixa_mei.csv` | CSV | Analisar entradas, saídas e identificar o lucro real do mês |
+| `historico_mentorias.csv` | CSV | Contextualizar conversas anteriores e lembretes de pendências financeiras |
+| `guia_servicos_das.json` | JSON | Consultar alíquotas e vencimentos do imposto DAS conforme a categoria (Comércio/Serviço) |
+| `metas_crescimento.json` | JSON | Personalizar conselhos sobre quando investir em novos equipamentos ou estoque |
 
 Você pode adaptar ou expandir esses dados conforme seu caso de uso.
 
