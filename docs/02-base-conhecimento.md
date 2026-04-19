@@ -2,7 +2,7 @@
 
 ## Dados Utilizados
 
-Para o Mestre Fortunato ser assertivo, ele precisa olhar para a saúde do negócio de forma holística, identificando padrões de comportamento e obrigações fiscais do MEI.
+- Para o Mestre Fortunato ser assertivo, ele precisa olhar para a saúde do negócio de forma holística, identificando padrões de comportamento e obrigações fiscais do MEI.
 
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
@@ -19,7 +19,7 @@ Para o Mestre Fortunato ser assertivo, ele precisa olhar para a saúde do negóc
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-Os dados foram significativamente expandidos para simular o cenário real de um MEI prestador de serviços (marcenaria) durante um período de dois meses. Foram inseridos intencionalmente "ruídos" financeiros, como o pagamento de gastos pessoais (iFood, Netflix, Conta de Água Residencial) utilizando a conta da empresa (PJ), para testar a capacidade do agente de alertar sobre confusão patrimonial. Além disso, o arquivo fiscal foi enriquecido com regras sobre limite de faturamento e a declaração anual (DASN-SIMEI), e as metas passaram a incluir a construção contínua de uma "Reserva de Emergência".
+- Os dados foram significativamente expandidos para simular o cenário real de um MEI prestador de serviços (marcenaria) durante um período de dois meses. Foram inseridos intencionalmente "ruídos" financeiros, como o pagamento de gastos pessoais (iFood, Netflix, Conta de Água Residencial) utilizando a conta da empresa (PJ), para testar a capacidade do agente de alertar sobre confusão patrimonial. Além disso, o arquivo fiscal foi enriquecido com regras sobre limite de faturamento e a declaração anual (DASN-SIMEI), e as metas passaram a incluir a construção contínua de uma "Reserva de Emergência".
 
 ---
 
@@ -28,12 +28,12 @@ Os dados foram significativamente expandidos para simular o cenário real de um 
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-Os arquivos JSON e CSV são carregados e pré-processados na inicialização da sessão. O sistema realiza um cruzamento prévio: soma os valores já reservados no metas_crescimento.json e os subtrai do saldo positivo gerado no fluxo_caixa_mei.csv, calculando o verdadeiro "caixa livre" antes de o agente iniciar a interação com o usuário.
+- Os arquivos JSON e CSV são carregados e pré-processados na inicialização da sessão. O sistema realiza um cruzamento prévio: soma os valores já reservados no metas_crescimento.json e os subtrai do saldo positivo gerado no fluxo_caixa_mei.csv, calculando o verdadeiro "caixa livre" antes de o agente iniciar a interação com o usuário.
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-O contexto processado é injetado dinamicamente no system prompt. O histórico de mentorias atua como um "gatilho" de atenção: se o historico_mentorias.csv relata um alerta recente sobre mistura de contas e o fluxo_caixa_mei.csv mostra uma nova transação suspeita, o Mestre Fortunato recebe uma instrução de prioridade para abordar essa falha logo na saudação inicial, antes de responder a outras dúvidas.
+- O contexto processado é injetado dinamicamente no system prompt. O histórico de mentorias atua como um "gatilho" de atenção: se o historico_mentorias.csv relata um alerta recente sobre mistura de contas e o fluxo_caixa_mei.csv mostra uma nova transação suspeita, o Mestre Fortunato recebe uma instrução de prioridade para abordar essa falha logo na saudação inicial, antes de responder a outras dúvidas.
 
 ---
 
