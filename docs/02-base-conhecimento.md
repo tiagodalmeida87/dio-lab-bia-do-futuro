@@ -19,7 +19,7 @@ Para o Mestre Fortunato ser assertivo, ele precisa olhar para a saúde do negóc
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-Os dados foram expandidos para separar gastos Pessoais (PF) de gastos do Negócio (PJ). Adicionei um campo de "Categoria MEI" no perfil para que o agente saiba exatamente qual imposto aplicar e quais deduções são permitidas por lei.
+Os dados foram significativamente expandidos para simular o cenário real de um MEI prestador de serviços (marcenaria) durante um período de dois meses. Foram inseridos intencionalmente "ruídos" financeiros, como o pagamento de gastos pessoais (iFood, Netflix, Conta de Água Residencial) utilizando a conta da empresa (PJ), para testar a capacidade do agente de alertar sobre confusão patrimonial. Além disso, o arquivo fiscal foi enriquecido com regras sobre limite de faturamento e a declaração anual (DASN-SIMEI), e as metas passaram a incluir a construção contínua de uma "Reserva de Emergência".
 
 ---
 
@@ -28,12 +28,12 @@ Os dados foram expandidos para separar gastos Pessoais (PF) de gastos do Negóci
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-Os arquivos JSON de regras fiscais e o CSV de fluxo de caixa são carregados no início da sessão. O sistema realiza uma leitura prévia para calcular o saldo disponível para "pro-labore" antes de iniciar a interação com o usuário.
+Os arquivos JSON e CSV são carregados e pré-processados na inicialização da sessão. O sistema realiza um cruzamento prévio: soma os valores já reservados no metas_crescimento.json e os subtrai do saldo positivo gerado no fluxo_caixa_mei.csv, calculando o verdadeiro "caixa livre" antes de o agente iniciar a interação com o usuário.
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-Os dados são inseridos dinamicamente no system prompt. Se o saldo de caixa estiver próximo do valor do DAS (imposto), o agente recebe uma instrução de prioridade para alertar o usuário sobre esse compromisso antes de qualquer outra sugestão de gasto.
+O contexto processado é injetado dinamicamente no system prompt. O histórico de mentorias atua como um "gatilho" de atenção: se o historico_mentorias.csv relata um alerta recente sobre mistura de contas e o fluxo_caixa_mei.csv mostra uma nova transação suspeita, o Mestre Fortunato recebe uma instrução de prioridade para abordar essa falha logo na saudação inicial, antes de responder a outras dúvidas.
 
 ---
 
@@ -45,15 +45,20 @@ Os dados são inseridos dinamicamente no system prompt. Se o saldo de caixa esti
 Dados do Microempreendedor:
 - Nome: Ricardo (Marceneiro)
 - Categoria: MEI - Serviços
-- Saldo em Conta PJ: R$ 3.200,00
-- Meta: Comprar Serra de Bancada (R$ 1.500,00)
+- Status Financeiro Atual: Caixa Positivo, mas com indícios de confusão patrimonial recente.
 
-Últimas Movimentações:
-- 10/04: Entrada - Venda Armário Planejado: + R$ 1.200,00
-- 12/04: Saída - Material de Madeira: - R$ 450,00
-- 15/04: Saída - Conta de Luz Residencial (ALERTA PF): - R$ 180,00
+Metas em Andamento:
+- Parafusadeira Profissional: R$ 350,00 guardados (Meta: R$ 850,00) - Status: Quase na metade!
+- Reserva de Emergência: R$ 100,00 guardados (Meta: R$ 3.000,00) - Status: Iniciado.
 
-Lembretes Fiscais:
-- Vencimento DAS: Dia 20 (R$ 70,60) - Status: Pendente.
+Últimas Movimentações (Maio/2024):
+- 20/05: Entrada - Parcela Gabinete de Banheiro: + R$ 600,00 (Conta PJ)
+- 22/05: Saída - Reserva para Meta (Parafusadeira): - R$ 200,00 (Conta PJ)
+- 28/05: Saída - Compra de EPI: - R$ 65,00 (Conta PJ)
+- 30/05: Saída - Fundo de Emergência: - R$ 100,00 (Conta PJ)
+
+Histórico e Alertas Críticos (Baseado no histórico de mentorias):
+- ALERTA COMPORTAMENTAL: Usuário utilizou cartão PJ para iFood e Netflix recentemente. Reforçar necessidade de Pró-labore.
+- ALERTA FISCAL: O prazo da Declaração Anual (DASN-SIMEI) encerra dia 31 de maio. Perguntar se ele já somou o faturamento.
 ...
 ```
