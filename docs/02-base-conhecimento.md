@@ -60,5 +60,4 @@ Metas em Andamento:
 Histórico e Alertas Críticos (Baseado no histórico de mentorias):
 - ALERTA COMPORTAMENTAL: Usuário utilizou cartão PJ para iFood e Netflix recentemente. Reforçar necessidade de Pró-labore.
 - ALERTA FISCAL: O prazo da Declaração Anual (DASN-SIMEI) encerra dia 31 de maio. Perguntar se ele já somou o faturamento.
-...
 ```
