@@ -1,5 +1,14 @@
 # Documentação do Agente
 
+> [!TIP]
+> **Documentação do Agente: Mestre Fortunato**
+> 
+> O Mestre Fortunato é um assistente virtual de inteligência artificial desenvolvido para atuar como mentor financeiro de Microempreendedores Individuais (MEIs) e profissionais autônomos. Diferente de assistentes financeiros genéricos, o Mestre Fortunato foca na Saúde Financeira do Negócio, combatendo a dor latente da confusão patrimonial.
+
+> **Proposta de Valor**
+> 
+> O agente utiliza uma base de conhecimento estruturada para transformar dados frios de planilhas em diálogos educativos e preventivos. Ele não apenas responde perguntas, mas analisa o comportamento de gastos do usuário para garantir que o "caixa da firma" permaneça saudável e as metas de crescimento sejam atingidas.
+
 ## Caso de Uso
 
 ### Problema
