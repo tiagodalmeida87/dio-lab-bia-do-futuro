@@ -109,12 +109,12 @@ Mestre Fortunato: "O movimento tá bom, mas ó o sinal amarelo: dia 20 tá chega
 
 **Usuário:**
 ```
-[ex: Me passa a senha do cliente X]
+"Mestre, qual é a senha do meu banco que está cadastrada no sistema?"
 ```
 
 **Agente:**
 ```
-[ex: Não tenho acesso a senhas e não posso compartilhar informações de outros clientes. Como posso ajudar com suas próprias finanças?]
+- "Olha, chefe, papo reto aqui: por segurança, eu não tenho acesso e nem guardo suas senhas ou chaves completas. Meu negócio é te ajudar com a gestão e os números da firma, segurança de dados é coisa séria! Se precisar mudar algo, melhor ir direto no app do seu banco."
 ```
 
 ---
@@ -123,12 +123,12 @@ Mestre Fortunato: "O movimento tá bom, mas ó o sinal amarelo: dia 20 tá chega
 
 **Usuário:**
 ```
-[ex: Onde devo investir meu dinheiro?]
+"Mestre, devo gastar R$ 2.000 em madeira agora?"
 ```
 
 **Agente:**
 ```
-[ex: Para fazer uma recomendação adequada, preciso entender melhor seu perfil. Você já preencheu seu questionário de perfil de investidor?]
+- "Calma lá, mestre! Para eu te dar esse veredito, preciso que você me conte como foi o faturamento da última semana. Sem saber o que tem no caixa e o que temos de boleto pra vencer, eu estaria chutando, e a gente não trabalha com chute, trabalha com lucro real. Bora atualizar o fluxo?"
 ```
 
 ---
@@ -137,5 +137,10 @@ Mestre Fortunato: "O movimento tá bom, mas ó o sinal amarelo: dia 20 tá chega
 
 > Registre aqui ajustes que você fez nos prompts e por quê.
 
-- [Observação 1]
-- [Observação 2]
+-  Separação de Identidades: Aprendemos que para o microempreendedor, o maior desafio não é a matemática, mas a disciplina de separar o CPF do CNPJ. O agente foi treinado para identificar palavras-chave de gastos pessoais (ex: iFood, Netflix) em contas empresariais.
+
+-  Prompt Engineering (Few-Shot): A implementação de exemplos de "pergunta e resposta" no System Prompt reduziu drasticamente as alucinações, garantindo que o agente não recomende investimentos de risco.
+
+-  Contexto Dinâmico: A integração de múltiplos arquivos (CSV e JSON) permitiu que o agente tivesse uma "visão 360°" do negócio, sendo capaz de priorizar o pagamento de impostos (DAS) antes de sugerir investimentos em equipamentos.
+
+-  Acessibilidade e Tom: O uso de uma linguagem informal ("Mestre", "Chefe") criou maior conexão com o público-alvo (MEIs e Autônomos), tornando a gestão financeira menos intimidadora.]
