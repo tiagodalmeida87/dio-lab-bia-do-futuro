@@ -1,5 +1,15 @@
 # Base de Conhecimento
 
+> [!TIP]
+> Prompt usado para esta etapa: Este documento descreve a estrutura de dados que sustenta a inteligência do Mestre Fortunato. A base foi projetada para oferecer uma visão 360° da saúde financeira do MEI, integrando históricos de transações, regras fiscais e metas de crescimento em um contexto unificado.
+
+> Para que o agente entregue orientações precisas, organizamos o conhecimento em quatro pilares:
+> 1. Operacional: Registro detalhado de entradas e saídas (PJ vs. PF).
+> 2. Consultivo: Memória de orientações passadas para garantir continuidade no aprendizado.
+> 3. Fiscal: Regras atualizadas sobre o Simples Nacional e obrigações do MEI.
+> 4. Estratégico: Monitoramento de metas e reservas de emergência.
+
+
 ## Dados Utilizados
 
 - Para o Mestre Fortunato ser assertivo, ele precisa olhar para a saúde do negócio de forma holística, identificando padrões de comportamento e obrigações fiscais do MEI.
