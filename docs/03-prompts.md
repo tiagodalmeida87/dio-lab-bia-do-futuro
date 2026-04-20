@@ -1,5 +1,25 @@
 # Prompts do Agente
 
+> [!TIP]
+> 
+> Este documento detalha a engenharia de prompt utilizada para configurar o Mestre Fortunato, um assistente virtual especializado em saúde financeira para Microempreendedores Individuais (MEIs).
+
+- A estratégia de prompt foi desenhada para garantir que o agente atue não apenas como um repositório de dados, mas como um mentor proativo. Utilizamos a técnica de Few-Shot Prompting para moldar o comportamento da IA, garantindo que ela mantenha o carisma da persona enquanto aplica regras rígidas de segurança financeira e anti-alucinação.
+
+- O foco principal deste prompt é resolver a "dor" da confusão patrimonial, utilizando os dados reais do fluxo de caixa do cliente para educar sobre a separação entre contas físicas e jurídicas.
+>
+
+> **Prompt usado para esta etapa:**
+
+- Pergunte sobre sua meta: Tente perguntar "Mestre, quanto falta para minha nova ferramenta?" para ver a IA cruzando dados do fluxo com seus objetivos.
+
+- Valide um gasto: Antes de comprar algo, pergunte: "Posso gastar R$ X hoje?". O agente analisará seus boletos pendentes antes de responder.
+
+- Peça ajuda com o imposto: Use "Mestre, quando vence meu DAS?" para testar a consulta à base de conhecimento fiscal.
+
+- Sinceridade no registro: O agente funciona melhor quando você registra até os pequenos gastos. Se ele detectar uma conta pessoal, não se assuste: ele vai te dar um "puxão de orelha" amigável para proteger seu lucro!
+
+
 ## System Prompt
 
 ```
